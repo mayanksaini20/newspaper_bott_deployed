@@ -1,31 +1,38 @@
-# Use an official Python runtime as a parent image
-FROM python:3.11-slim
+# Use the official Python image as a base
+FROM python:3.9-slim
 
-# Install necessary system packages
-RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
+# Set environment variables to prevent Python from buffering stdout and stderr
+ENV PYTHONUNBUFFERED=1
+
+# Install necessary system packages, including Tesseract and Hindi language data
+RUN apt-get update && \
+    apt-get install -y \
     tesseract-ocr \
+    tesseract-ocr-hin \
     libtesseract-dev \
-    libleptonica-dev \
-    ffmpeg \
-    curl \
-    && apt-get clean
+    wget && \
+    rm -rf /var/lib/apt/lists/*
 
-# Set the working directory to /app
+# Set the TESSDATA_PREFIX environment variable to point to the Tesseract language data
+ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata/
+
+# Install other necessary system dependencies (optional: depending on your project)
+RUN apt-get install -y \
+    ffmpeg \
+    libsm6 \
+    libxext6
+
+# Create a working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Copy requirements.txt to the container
+COPY requirements.txt /app/
 
-# Install Python dependencies
+# Install the required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 8080 (if needed, adjust based on your app)
-EXPOSE 8080
+# Copy the entire project code into the container
+COPY . /app/
 
-# Set environment variable
-ENV NAME Bot
-
-# Run the bot
-CMD ["python", "bot.py"]
+# Command to run the Python script when the container starts
+CMD ["python", "your_script.py"]
