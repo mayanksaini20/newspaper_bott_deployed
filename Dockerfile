@@ -4,23 +4,20 @@ FROM python:3.9-slim
 # Set environment variables to prevent Python from buffering stdout and stderr
 ENV PYTHONUNBUFFERED=1
 
-# Install necessary system packages, including Tesseract and Hindi language data
-RUN apt-get update && \
-    apt-get install -y \
+# Update and install necessary system packages, including Tesseract and Hindi language data
+RUN apt-get update && apt-get install -y \
     tesseract-ocr \
     tesseract-ocr-hin \
     libtesseract-dev \
     wget && \
+    apt-get install -y --no-install-recommends \
+    ffmpeg \
+    libsm6 \
+    libxext6 && \
     rm -rf /var/lib/apt/lists/*
 
 # Set the TESSDATA_PREFIX environment variable to point to the Tesseract language data
 ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata/
-
-# Install other necessary system dependencies (optional: depending on your project)
-RUN apt-get install -y \
-    ffmpeg \
-    libsm6 \
-    libxext6
 
 # Create a working directory
 WORKDIR /app
