@@ -178,7 +178,7 @@ def process_image(update: Update, context: CallbackContext, input_image_path: st
 # Main function to set up the bot
 def main() -> None:
     # Your Telegram Bot API Token
-    TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'  # Replace with your actual token
+    TELEGRAM_BOT_TOKEN = '7565910815:AAHSAT6AtHwhBdcqtLdvrIAjhI_6ZRrKRUc'  # Replace with your actual token
 
     # Set up the bot
     updater = Updater(TELEGRAM_BOT_TOKEN)
