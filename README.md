@@ -50,4 +50,14 @@ To set up and run the Newspaper Bot locally, follow these steps:
    python bot.py
 
 2. **Interact via Telegram:**:
+   
+- Open Telegram and search for "Newspaper Bot".
+- Start the bot by typing /start.
+- Set the language to Hindi by typing /setlanguage and selecting Hindi.
+- Send a clear image of a Hindi newspaper to the bot.
+- The bot will process the image and send back audio files of the extracted news articles.
 
+### Techniques Used
+-YOLOv8 for Article Detection: A modified YOLOv8 model is used to detect and extract articles from newspaper images.
+-Tesseract OCR for Text Extraction: Converts the extracted article images into text.
+-gTTS for Audio Conversion: Transforms the extracted text into audio files.****
