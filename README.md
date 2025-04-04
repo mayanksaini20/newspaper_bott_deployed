@@ -70,6 +70,12 @@ To set up and run the Newspaper Bot locally, follow these steps:
 
 ![Select the Hindi Language](wo10.jpg)
 
+2.Hindi Articles Detected And Audio File Generated
+
+![Select the Hindi Language](wo11.jpg)
+
+
+
 ### Notes
 
 - Ensure that the newspaper images sent to the bot are clear and of high quality for optimal processing.
