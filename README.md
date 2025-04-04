@@ -42,4 +42,12 @@ To set up and run the Newspaper Bot locally, follow these steps:
    ```bash
    pip install -r requirements.txt
 
+### Usage
+
+1. **Run the Bot:**:
+
+   ```bash
+   python bot.py
+
+2. **Interact via Telegram:**:
 
