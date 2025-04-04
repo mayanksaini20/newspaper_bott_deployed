@@ -36,3 +36,10 @@ To set up and run the Newspaper Bot locally, follow these steps:
    git clone https://github.com/mayanksaini20/newspaper_bott_deployed.git
 
 2. **Navigate to the Project Directory**:
+   ```bash
+   cd newspaper_bott_deployed
+3. **Install Required Packages**:
+   ```bash
+   pip install -r requirements.txt
+
+
