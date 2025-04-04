@@ -62,3 +62,11 @@ To set up and run the Newspaper Bot locally, follow these steps:
 - YOLOv8 for Article Detection: A modified YOLOv8 model is used to detect and extract articles from newspaper images.
 - Tesseract OCR for Text Extraction: Converts the extracted article images into text.
 - gTTS for Audio Conversion: Transforms the extracted text into audio files.
+
+### Notes
+
+- Ensure that the newspaper images sent to the bot are clear and of high quality for optimal processing.
+- The bot is currently not deployed online; it needs to be run locally as described above.
+
+### Acknowledgments
+This project is licensed under the MIT License. See the LICENSE file for details.
