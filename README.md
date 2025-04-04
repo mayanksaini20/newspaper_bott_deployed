@@ -66,6 +66,7 @@ To set up and run the Newspaper Bot locally, follow these steps:
 ### Output
 
 #### Hindi Newspaper Output
+![Select the Hindi Language](wo10.jpg)
 
 ### Notes
 
