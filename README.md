@@ -68,5 +68,5 @@ To set up and run the Newspaper Bot locally, follow these steps:
 - Ensure that the newspaper images sent to the bot are clear and of high quality for optimal processing.
 - The bot is currently not deployed online; it needs to be run locally as described above.
 
-### Acknowledgments
+### License
 This project is licensed under the MIT License. See the LICENSE file for details.
