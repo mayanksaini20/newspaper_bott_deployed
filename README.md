@@ -63,6 +63,10 @@ To set up and run the Newspaper Bot locally, follow these steps:
 - Tesseract OCR for Text Extraction: Converts the extracted article images into text.
 - gTTS for Audio Conversion: Transforms the extracted text into audio files.
 
+### Output
+
+#### Hindi Newspaper Output
+
 ### Notes
 
 - Ensure that the newspaper images sent to the bot are clear and of high quality for optimal processing.
